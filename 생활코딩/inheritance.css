@@ -1,0 +1,13 @@
+/* li{
+    color: red;
+}
+h1{
+    color: red;
+} */
+body{
+    color: red;
+    border: 1px solid red;
+}
+#select{
+    color: black;
+}
