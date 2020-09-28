@@ -1,0 +1,38 @@
+body{
+    margin: 15px;
+    /* padding: 15px; */
+}
+h1{
+    color: tomato;
+}
+
+#px{
+    font-size: 20px;
+}
+#rem{
+    font-size: 2rem;
+}
+.lorem{
+    text-align: justify;
+    border: 1px solid gray;
+    margin: 5px;
+    padding: 5px;
+}
+.font1{
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 2;
+}
+.font2{
+    font: bold 2rem/2 Arial, Helvetica, sans-serif ;
+}
+.font3{
+    font-family: 'Bangers', cursive;
+}
+.font4{
+    font-family: 'Lobster', cursive;
+}
+.font5{
+    font-family: 'Pacifico', cursive;
+}
