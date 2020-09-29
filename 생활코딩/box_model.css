@@ -12,10 +12,10 @@ p,a{
 *{
     box-sizing: border-box;
 }
-div{
+/* div{
     margin: 10px;
     width: 150px;
-}
+} */
 #small{
     border: 10px solid black;
 }
@@ -34,4 +34,21 @@ h1{
     border: 1px solid red;
     margin: 100px;
     padding: 10px;
+}
+#parent{
+    border: 1px solid tomato;
+    margin-top: 100px;
+}
+#child{
+    background-color: powderblue;
+    margin-top: 50px;
+}
+#empty{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    border:1px solid tomato;
+}
+#normal{
+    background-color: powderblue;
+    margin-top: 100px;
 }
