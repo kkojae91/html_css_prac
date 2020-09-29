@@ -1,0 +1,23 @@
+.container{
+    background-color: powderblue;
+    height: 700px;
+
+    display: flex;
+    flex-direction: row;
+}
+.item{
+    background-color: tomato;
+    color: white;
+    border: 1px solid white;
+    /* flex-grow: 1; */
+}
+.item:nth-child(1){
+    flex-basis: 100px;
+    flex-shrink: 1;
+}
+
+.item:nth-child(2){
+    flex-basis: 300px;
+    flex-shrink: 2;
+    /* flex-grow: 3; */
+}
