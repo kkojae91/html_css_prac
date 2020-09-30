@@ -1,0 +1,14 @@
+img{
+    width: 50%;
+    transition: all is;
+}
+img:hover{
+    /* width: 50%; */
+    -webkit-filter: grayscale(100%) blur(2px);
+    /* -o-filter: grayscale(100%); */
+    filter: grayscale(100%) blur(2px);
+}
+h1{
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+}
