@@ -1,0 +1,12 @@
+.column{
+    text-align: justify;
+    column-count: 4;
+    column-width: 200px;
+    column-gap: 30px;
+    column-rule-style: dashed;
+    column-rule-width: 1px;
+    column-rule-color: red
+}
+h1{
+    column-span: all;
+}
