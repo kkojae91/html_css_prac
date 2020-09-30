@@ -1,0 +1,12 @@
+.back{
+    font-size: 50px;
+    height: 800px;
+    border: 5px solid gray;
+    background-color: tomato;
+    background-image: url("./runimage.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-size: contain; */
+    background-position: left bottom;
+    /* background: tomato url("./runimage.png") no-repeat fixed left bottom; */
+}
