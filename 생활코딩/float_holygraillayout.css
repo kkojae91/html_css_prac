@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    width: 741px;
+    border: 1px solid gray;
+    margin: auto;
+}
+header{
+    border-bottom: 1px solid gray;
+}
+nav{
+    float: left;
+    width: 120px;
+    border-right: 1px solid gray;
+}
+article{
+    float: left;
+    width: 500px;
+    border-left: 1px solid gray;
+    margin-left: -1px;
+    border-right: 1px solid gray;
+}
+aside{
+    float: left;
+    width: 120px;
+    border-left: 1px solid gray;
+    margin-left: -1px;
+}
+footer{
+    clear: both;
+    border-top: 1px solid gray;
+    text-align: center;
+    padding: 20px;
+}
