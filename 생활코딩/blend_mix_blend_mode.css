@@ -1,0 +1,10 @@
+body{
+    background-image: url("./penguins1.jpg");
+    /* background-size: cover; */
+}
+.blend{
+    font-size: 2rem;
+    font-weight: bold;
+    color: red;
+    mix-blend-mode: overlay;
+}
