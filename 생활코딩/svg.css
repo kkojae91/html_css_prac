@@ -1,0 +1,7 @@
+img{
+    width: 400px;
+}
+.svg{
+    height: 400px;
+    background-image: url("./lego_svg.svg");
+}
