@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./form_input.css">
+    <title>Form</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form class="form" action="#" method="GET">
+        <input id="form_input_name" class="form_input" type="text" placeholder="이름" />
+        <!-- disabled 를 속성값으로 사용하면 사용자가 input란에 입력하지 못하게 막아준다. -->
+        <input id="form_input_id" class="form_input" type="text" minlength="5" maxlength="10" placeholder="아이디" required />
+        <input id="form_input_email" class="form_input" type="email" placeholder="이메일" />
+        <input id="form_input_password" class="form_input" type="password" minlength="6" maxlength="12" placeholder="비밀번호" />
+        <input id="form_input_url" class="form_input" type="url" placeholder="포트폴리오 url" />
+        <input id="form_input_tel" class="form_input" type="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="전화번호(01*-****-****)">
+        <input id="form_input_age" class="form_input" type="number" min="12" max="120" placeholder="만 나이" />
+        <!-- accept attribute를 사용해서 입력한 확장자를 제외한 파일은 올릴 수 없게 만들어 준다. -->
+        <input id="form_input_file" class="form_input" type="file" accept=".png, .jpg" />
+        <button id="form_button" class="form_button">Submit</button>
+    </form>
+</body>
+</html>
