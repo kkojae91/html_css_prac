@@ -12,25 +12,51 @@ body{
     /* align-content: center; */
 }
 
-/* h1{
-    align-self: flex-start;
-} */
+h1{
+    width: 360px;
+    /* border: 1px solid gray; */
+    font-weight: 100;
+    font-size: 32px;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    color: #101010;
+    letter-spacing: -.05em;
+}
 
-form{
+label{
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+
+}
+
+/* form{
     display: flex;
     flex-direction: column;
-}
+} */
 
+/* input에 display block 을 주면 form tag 에 flex를 주지 않아도 자연스럽게 설정 됩니다. */
 .form_input{
-    margin: 5px;
-    padding: 5px;
+    display: block;
+    margin-bottom: 12px;
+    padding: 0 12px;
     width: 360px;
     height: 44px;
+    font-size: 16px;
+    border: 1px solid #d3dce6;
+    border-radius: 7px;
+    /* transition: ; */
 }
 
-.form_button{
-    margin: 5px;
-    padding: 5px;
-    width: 60px;
-    height: 30px;
+input:focus,
+input:hover,
+input:active{
+    outline:none;
+    box-shadow: none;
+    border-color: #1fb6ff;
+}
+
+input[type="file"]{
+    padding-top: 10px;
 }
