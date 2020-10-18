@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./media.css">
+    <title>Html Media</title>
+</head>
+<body>
+    <!-- audio의 autoplay attribute를 사용하면 웹에 접속하면 자동으로 소리가 들리고, 웹화면에는 controls 창이 나타나지 않습니다. -->
+    <!-- 현재 autoplay가 크롬에서 막혀있어서 아래와 같이 코딩하면 자동 Bgm을 사용할 수 있다. -->
+    <iframe src="./assets/audios/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+    
+    <!-- autoplay 옆에 loop를 사용하면 자동으로 무한 반복 시켜줍니다. -->
+    <audio autoplay  id="bgmAudio">
+        <!-- source테그로 나눠서 사용하면 인터넷 환경에 따라 지원되지 않는 확장자가 있는데 재생이 되지 않는다면 이중에 재생되는 애들중 하나를 틀어줘! 라는 명령이다. -->
+        <!-- 아래 3개의 파일 모두 올라가는게 아님!!! -->
+        <source src="./assets/audios/kimbug.mp3" type="audio/mp3" />
+        <source src="./assets/audios/kimbug.wav" type="audio/wav" />
+        <source src="./assets/audios/kimbug.ogg" type="audio/ogg" />
+        <!-- 위의 확장자가 모두 재생되지 않을때.. 아래의 문구를 띄워 줄 수 있다. -->
+        <p>당신의 브라우저를 버리시고 크롬을 사용하시는게 어떨까요?</p>  
+    </audio>
+
+    <!--아래의 코드 보다는 위의 코드를 사용하는게 더 좋아요! -->
+    <!-- 위처럼 audio tag 안에 source tag를 사용해서 쓸 수 있다 위의 코드와 아래의 코드는 동일한 코드! -->
+    <!-- audio의 controls attribute를 사용해야 웹에서 사용할 수 있다. controls를 제외하면 웹화면에 나타나지 않는다. -->
+    <audio src="./assets/audios/kimbug.mp3" controls></audio>
+
+    <!-- 비디오는 오디오와 동일한 폼을 사용합니다. -->
+    <!-- <video src="./assets/videos/kimbug.mov" controls></video> -->
+
+    <!-- attribute는 controls autoplay 둘다 사용가능합니다. -->
+    <!-- 크롬에서 자동 재생이 막혀 있어서 muted attribute를 사용해주어야 크롬에서 자동재생이 음소거로 진행된다. -->
+    <video controls>
+        <!-- vidoes 역시 audios와 동일하게 아래의 것들중 실행되는 것 하나를 실행 시켜준다. -->
+        <!-- mov // mp4 둘다 type의 확장자는 동일하게 적용한다. -->
+        <source src="./assets/videos/kimbug.mov" type="video/mp4" />
+        <source src="./assets/videos/kimbug.mp4" type="video/mp4" />
+    </video>
+</body>
+</html>
