@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./table_deep.css">
+    <title>html TableDeep</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <!-- 빈칸도 명시를 해줘야 틀이 망가지지 않습니다. -->
+                <th></th>
+                <!-- th tag의 attribute으로 scope 가 있다. -->
+                <!-- col | row 를 사용할 수 있고, -->
+                <!-- col 말 그대로 columns의 head를 의미한다고 명시 해주는것  -->
+                <th scope="col">월</th>
+                <th scope="col">화</th>
+                <th scope="col">수</th>
+                <th scope="col">목</th>
+                <th scope="col">금</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 첫번째 줄 -->
+            <tr>
+                <!-- 첫번째 세로 줄은 row를 대표하는 친구들이니 th로 해주고 나머지는 td로 묶어준다. -->
+                <!-- scope="row" row를 대표하는 heading 이라고 명시해줌 -->
+                <th scope="row">1교시</th>
+                <!-- $amp; === &  html에서는 & 이친구만 사용하면 컴퓨터가 햇갈리기 때문에 amp; 까지 붙여서 사용해 주어야합니다.-->
+                <!-- rowspan="2" 2줄을 차지하겠다는 의미 -->
+                <td class="html-css-basic" rowspan="2">왕초보 HTML &amp; CSS</td>
+                <td class="coding">모각코</td>
+                <td class="html-css-basic" rowspan="2">왕초보 HTML &amp; CSS</td>
+                <td class="coding">모각코</td>
+                <td class="html-css-basic" rowspan="2">왕초보 HTML &amp; CSS</td>
+            </tr>
+
+            <!-- 두번째 줄 -->
+            <tr>
+                <!-- scope="row" row를 대표하는 heading 이라고 명시해줌 -->
+                <th scope="row">2교시</th>
+                <!-- 첫번째 줄에서 rowspan을 통해 2번째 줄의 자리까지 이미 차지 하고 있는 것들이 있기 때문에, 
+                    생략을 해줘야 함, 생략하지 않으면 표가 엄청나게 깨져서 나옵니다 🤣 -->
+                <!-- <td></td> -->
+                <td class="js-skillup" rowspan="2">JavaScript 스킬업</td>
+                <!-- <td></td> -->
+                <td class="js-skillup" rowspan="2">JavaScript 스킬업</td>
+                <!-- <td></td> -->
+            </tr>
+
+            <!-- 세번째 줄 -->
+            <tr>
+                <!-- scope="row" row를 대표하는 heading 이라고 명시해줌 -->
+                <th scope="row">3교시</th>
+                <td class="js-basic">JavaScript 시작반</td>
+                <!-- <td></td> -->
+                <td class="js-basic">JavaScript 시작반</td>
+                <!-- <td></td> -->
+                <td class="js-basic">JavaScript 시작반</td>
+            </tr>
+
+            <!-- 네번째 줄 -->
+            <tr>
+                <!-- scope="row" row를 대표하는 heading 이라고 명시해줌 -->
+                <!-- colspan="6" 6칸을 모두 사용하겠다. -->
+                <th scope="row" colspan="6">점심시간</th>
+                <!-- rowspan과 마찬가지로 다른 칸들은 다 생략가능합니다. -->
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+            </tr>
+
+            <!-- 다섯번째 줄 -->
+            <tr>
+                <!-- scope="row" row를 대표하는 heading 이라고 명시해줌 -->
+                <th scope="row">4교시</th>
+                <td class="sass-basic">SASS 기초반</td>
+                <td class="portfolio" rowspan="2">Html &amp; Css 포트폴리오반</td>
+                <td rowspan="2">Open Seminar</td>
+                <td class="portfolio" rowspan="2">Html &amp; Css 포트폴리오반</td>
+                <td>SASS 기초반</td>
+            </tr>
+
+            <!-- 여섯번째 줄 -->
+            <tr>
+                <!-- scope="row" row를 대표하는 heading 이라고 명시해줌 -->
+                <th scope="row">5교시</th>
+                <td class="coding">모각코</td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+                <td class="coding">모각코</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

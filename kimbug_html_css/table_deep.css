@@ -1,0 +1,89 @@
+@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqHanSans-kr.css);
+*{
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: -0.03em;
+}
+
+html{
+    font-family: "SpoqHanSans";
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1f2d3d;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid gray; */
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+table{
+    border: 1px solid #000;
+    /* collapse 서로 이웃하는 테이블이나 셀의 테두리선을 겹쳐서 표현합니다 */
+    /* defalut 값은 separate 서로 이웃하는 테이블이나 셀의 테두리선을 분리시켜 표현 */
+    border-collapse: collapse;
+}
+
+td,
+th{
+    /* white-space는 스페이스와 탭, 줄바꿈, 자동 줄바꿈을 어떻게 처리할지 정하는 속성입니다. */
+    white-space: nowrap;
+    vertical-align: center;
+    text-align: center;
+    font-size: 13px;
+}
+
+th{
+    padding: 4px 12px;
+}
+
+td{
+    padding: 12px 24px;
+    font-size: 12px;
+}
+
+thead{
+    background-color: #000;
+    color: #fff;
+}
+
+tbody th{
+    background-color: #1f2d3d;
+    color: #fff;
+}
+
+tbody th[colspan="6"]{
+    padding: 10px;
+    padding-left: 55px;
+    background-color: #f9fafc;
+    color: #1f2d3d;
+}
+
+td.html-css-basic{
+    color: #1fb6ff;
+}
+
+td.js-basic{
+    color: #ffc82c;
+}
+
+td.js-skillup{
+    color: #592dea;
+}
+
+td.sass-basic{
+    color: #ff16d1;
+}
+
+td.coding{
+    color: #ff5216;
+}
+
+td.portfolio{
+    color: #13ce66;
+}
