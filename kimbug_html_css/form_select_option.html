@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html select_option</title>
+</head>
+<body>
+    <!-- radio checkbox 와 동일하게.. select에 name 값을 주고, option에 value값을 주어야 컴퓨터가 누가 누구인지 구분 할 수 있어요! -->
+    <form action="#" method="GET">
+        <label for="skill">사용가능 언어</label>
+        <!-- select에 multiple attribute를 주면 다중 선택이 가능하게 됩니다. -->
+        <select multiple name="skill" id="skill">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+        </select>
+        <button type="submit">
+            Submit
+        </button>
+    </form>
+</body>
+</html>
