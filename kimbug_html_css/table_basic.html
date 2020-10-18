@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html table</title>
+</head>
+<body>
+    <!-- 나 지금부터 table 생성할거야 -->
+    <table>
+        <!-- thead 를 명시해줌으로써 table head의 시작을 알림 -->
+        <thead>
+            <!-- table row 첫번째 줄 시작  -->
+            <tr>
+                <!-- table head 해당 table의 heading tag 들을 작성해주고. -->
+                <th>PK</th>
+                <th>ID</th>
+                <th>이름</th>
+                <th>개발분야</th>
+                <th>기타</th>
+            </tr>
+        </thead>
+
+        <!-- tbody 를 명시해줌으로써 table body의 시작을 알림 -->
+        <tbody>
+            <!-- table row 두번째 줄 시작 -->
+            <tr>
+                <!-- table data!! table head 에 작성 순서에 맞게 data를 집어 넣어준다.  -->
+                <!-- table head의 네번째 목록인 기타 항목에 적을 말이 없어도 table data에도 형식상 td를 써서 빈칸으로 비워 둬야한다. -->
+                <td>001</td>
+                <td>kkojae</td>
+                <td>고재증</td>
+                <td>frontend</td>
+                <td></td>
+            </tr>
+            <!-- table row 세번째 줄 시작 -->
+            <tr>
+                <!-- table data!! table head 의 작성순서에 맞게 2번재 data를 집어 넣어준다. -->
+                <td>002</td>
+                <td>kimbug</td>
+                <td>김버그</td>
+                <td>fullstack</td>
+                <td>teacher</td>
+            </tr>
+        </tbody>
+        
+        <!-- tfoot 은 총합?! 같은 마지막에 위의 결과를 총합해서 나타내거나 할때 사용.. -->
+        <tfoot>
+            <tr>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- thead와 tbody는 작성하지 않아도 되지만 난 앞으로 무조건 넣을꺼야! 메롱 😛 -->
+</body>
+</html>
