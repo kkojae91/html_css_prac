@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./receipt_style.css">
+    <title>html receipt</title>
+</head>
+<body>
+    <h1>
+        Bill sharing request
+        <span>from kkojae</span>
+    </h1>
+
+    <div class="receipt">
+        <h2>
+            McDonald's
+        </h2>
+        <strong class="barcode">
+            <img src="./assets/barcode.svg" alt="Barcode" />
+        </strong>
+        <span aria-label="Issued on June 24th, 20xx">
+            24.06.20xx
+        </span>
+    
+    
+        <div>
+            <dl>
+                <div>
+                    <dt>
+                        Coke Light - 0.3<span aria-label="litter">L</span>
+                    </dt>
+                    <dd>
+                        &dollar;1.50
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>
+                        Heineken Beer - 0.5<span aria-label="litter">L</span>
+                    </dt>
+                    <dd>
+                        &dollar;3.25
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>
+                        Chicken McNuggets
+                    </dt>
+                    <dd>
+                        &dollar;21.00
+                    </dd>
+                </div>
+            </dl>
+
+            <!-- total에 대한 정보는 먼저 나오는 것 보단 나중에 나오게 하고, css를 통해 제일 위로 올려주자. -->
+            <!-- 꼭 이렇게 할 필요는 없다. -->
+            <dl>
+                <dt>In total</dt>
+                <dd>
+                    <strong>
+                        &dollar;25.75
+                    </strong>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</body>
+</html>
