@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 아래의 스크립 코드는 Font awesome 페이지의 이모티콘을 사용하기 위해 첨부 함. -->
+    <script src="https://kit.fontawesome.com/2beda90069.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./product-card_style.css">
+    <title>Html Product-card</title>
+</head>
+<body>
+    <div class="product-card">
+        <div class="product-card-image">
+            <img src="https://user-images.githubusercontent.com/19285811/69318246-becd7980-0c77-11ea-8324-6c43e2de8cf2.png" alt="">
+        </div>
+
+        <div class="product-card-title">
+            <h1>
+                혼자가 혼자에게
+            </h1>
+            <strong aria-label="오늘의 책 선정">
+                오늘의 책
+            </strong>
+        </div>
+        
+        <strong class="product-card-author" aria-label="저자 이병률">
+            이병률
+        </strong>
+        
+        <strong class="product-card-review" aria-label="평점 9.4">
+            <!-- aria-hidden 읽지 않아도 된다는 의미. -->
+            <!-- span으로 묶어주면 inline요소가 되고 div로 묶어주면 block 요소가 된다. -->
+            <span aria-hidden="true">
+                <!-- 아래의 i tag 는 위의 script tag가 없으면 실행 되지 않는다. -->
+                <!-- font awesome -->
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half"></i>
+            </span>
+            9.4
+        </strong>
+    </div>
+</body>
+</html>
