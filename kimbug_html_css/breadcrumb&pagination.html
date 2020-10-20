@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./breadcrumb&pagination_style.css">
+    <title>Breadcrumb &amp; Pagination</title>
+</head>
+<body>
+    <div class="breadcrumb">
+        <a href="https://github.com/kkojae91" aria-label="Go to kkojae91 profile page">
+            kkojae91
+        </a>
+        <a href="https://github.com/kkojae91/html_css_prac" aria-label="Go to html-css-prac repository page">
+            html_css_prac
+        </a>
+    </div>
+
+    <div class="pagination">
+        <!-- aria-label 시각장애인에게 부연적으로 설명할 수 있는 문구를 적어 줄 수 있습니다. -->
+        <a class="disabled" href="#" aria-label="Go to previous page">
+            Previous
+        </a>
+        <ol>
+            <li class="current-page">
+                <a href="#" aria-label="Current Page. Go to page 1">1</a>
+            </li>
+            <li>
+                <a href="#" aria-label="Go to page 2">2</a>
+            </li>
+            <li>
+                <a href="#" aria-label="Go to page 3">3</a>
+            </li>
+            <li>
+                <a href="#" aria-label="Go to page 4">4</a>
+            </li>
+            <li>
+                <a href="#" aria-label="Go to page 5">5</a>
+            </li>
+            <li>
+                <!-- button 에 disabled 속성을 넣어주면, 버튼이긴 버튼인데 누를 수 없는 사용할 수 없는 버튼이다. -->
+                <button type="button" disabled>
+                    ...
+                </button>
+            </li>
+            <li>
+                <a href="#" aria-label="Go to page 6">6</a>
+            </li>
+            <li>
+                <a href="#" aria-label="Go to page 7">7</a>
+            </li>
+            <li>
+                <a href="#" aria-label="Go to page 8">8</a>
+            </li>
+            <li>
+                <a href="#" aria-label="Go to page 9">9</a>
+            </li>
+        </ol>
+        <a href="#" aria-label="Go to Next page">
+            Next
+        </a>
+    </div>
+</body>
+</html>
