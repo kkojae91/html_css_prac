@@ -1,0 +1,35 @@
+<!-- section tag는 sectioning element 이기 때문에 heading tag를 반드시 써주어야 한다. -->
+<section>
+    <h1>What's happening?</h1>
+    <form action="#" method="POST">
+        <img src="#" alt="@kkojae_" />
+        <textarea name="" id="" maxlength="280" placeholder="What's happening"></textarea>
+
+        <!-- file의 multiple을 하면 여러가지 파일을 업로드 할 수 있다. -->
+        <!-- accept attribute를 활용하여, 업로드 할 수 있는 확장자를 설정 할 수 있다. -->
+        <!-- input tag는 이미지를 꾸밀 수 없기 때문에 따로 button tag를 만들어주어야 한다. -->
+        <button type="button" aria-label="Upload-files">
+            <!-- Icon -->
+        </button>
+        <input type="file" multiple accept="image/*, video/*" />
+        <button type="button" aria-label="Search GIFs...">
+            <!-- Icon -->
+        </button>
+        <button type="button" aria-label="Create a poll">
+            <!-- Icon -->
+        </button>
+        <button type="button" aria-label="Choose emoji">
+            <!-- Icon -->
+        </button>
+        <!-- java script를 활용해서 글씨가 채워지면 0 인부분의 숫자가 바뀌도록 한다.-->
+        <strong aria-label="0 out of 280 characters">
+        </strong>
+        <button type="button" aria-label="add another tweet">
+            <!-- Icon -->
+        </button>
+        <button type="submit">
+            <!-- Icon -->
+            Tweet
+        </button>
+    </form>
+</section>
