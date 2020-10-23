@@ -1,0 +1,40 @@
+/* block 요소는 길막!!
+부모요소의 width 값을 그대로 가지고 온다.
+block요소의 width값을 따로 설정하게 된다면, 남은 공간은 margin으로 채워버려서
+다른 요소가 옆자리에 오지 못하게 막는다. 
+부모 요소의 height를 설정하지 않는 경우 자식요소의 height 합이 부모요소의 height가 됩니다.
+block 요소는 모든 property를 사용할 수 있다 어떤것이든!!
+*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.parent{
+    background-color: #e5e9f2;
+}
+
+.child,
+.other{
+    height: 50px;
+    color: #212529;
+    line-height: 50px;
+    text-indent: 20px;
+}
+
+.child{
+    background-color: #ffc82c;
+    width: 500px;
+}
+
+.other{
+    background-color: #ff4949;
+    width: 100px;
+    /* margin : 0 auto 마진값을 이용한 가운데 정렬! */
+    margin: 0 auto;
+}
