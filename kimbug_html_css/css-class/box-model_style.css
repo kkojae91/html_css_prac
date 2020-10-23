@@ -1,0 +1,22 @@
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+/* 시게방향으로 흘러간다고 생각하면 쉽다! */
+/* css 속기형 top right bottom left 순서!! */
+.box{
+    width: 300px;
+    height: 300px;
+    padding: 10px 30px 50px 70px;
+    /* 두개만 적어주면 첫번째인자는 top bottom, 두번째인자는 right left */
+    border: 1px solid #000;
+    /* border-radius 도 역시 부분부분만 적용 시켜줄 수 있습니다.; */
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin: 20px 40px;
+    background-color: hotpink;
+    margin-bottom: 30px;
+}
+
+/* 인자를 3개만 적어주면 top 10 right 30 bottom 50 left 30 */
+/* padding: 10px 30px 50px */
