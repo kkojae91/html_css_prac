@@ -1,0 +1,22 @@
+/* inline 기본적으로 흐름! 
+block과는 반대의 효과를 준다. 
+inline요소는 부모의 자리가 모자라면 자연스럽게 밑에 공간으로 넘어가서 그곳에 자리를 차지하게 됩니다.
+inline요소는 자기가 스스로 줄을 잘 맞춰서 가고 있는데 자신의 흐름을 방해하는 inline요소는 용납하지 못한다.
+즉 width, height, padding-top, padding-bottom, border-top, border-bottom, margin-top, margin-bottom은 사용이 불가능 합니다.
+*/
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    color: #212592;
+}
+
+span{
+    color: #fff;
+    background-color: #0066ff;
+}
