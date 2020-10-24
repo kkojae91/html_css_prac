@@ -5,7 +5,11 @@ inline요소는 자기가 스스로 줄을 잘 맞춰서 가고 있는데 자신
 즉 width, height, padding-top, padding-bottom, border-top, border-bottom, margin-top, margin-bottom은 사용이 불가능 합니다.
 */
 
-
+/* 
+inline-block 은 inline 속성과 block의 속성을 짬뽕해놓은 귀여운 녀석!
+인라인의 흐름에 블록의 요소가 추가라는 이야기!
+display: inline-block
+*/
 *{
     box-sizing: border-box;
     margin: 0;
@@ -17,6 +21,10 @@ body{
 }
 
 span{
+    /* display: inline-block을 사용하면 width height등 inline에서 사용하지 못하던 property들을 사용할 수 있습니다. */
+    display: inline-block;
+    /* width값을 추가하면 inline의 흐름은 변화 없지만, block의 요소가 적용되어 흐름위에 block의 property가 적용된 모습을 확인 할 수 있습니다. */
+    width: 100px;
     color: #fff;
     background-color: #0066ff;
 }
