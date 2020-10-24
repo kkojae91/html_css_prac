@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    /* font-weight: 400; */
+    /* line-height: 20px; */
+    /* letter-spacing:  문자간의 간격! ; */
+    letter-spacing: -0.02em;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #eff2f7;
+}
+
+body::after{
+    content: "@kkojae_";
+    display: block;
+    margin: 50px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+a{
+    font-size: 18px;
+    line-height: 20px;
+    color: #8492a2;
+    text-decoration: none;
+}
+
+/* Where Your code begins */
+
+.tab-menu{
+    list-style-type: none;
+    padding-left: 0;
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    border-radius: 4px;
+    border-bottom: 1px solid #e5eaef;
+}
+
+/* pseudo 를 활용해서 무너진 display를 복원 시킨다. */
+.tab-menu::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.tab-menu-item{
+    float: left;
+    margin-right: 16px;
+}
+
+/* 
+a tag는 inline이기 때문에 padding top bottom이 적용이 안된다.
+display: block or inline-block 을 통해 block 요소로 변경 해주어야 한다.
+*/
+.tab-menu-item a{
+    display: block;
+    padding: 16px 20px;
+}
+
+.tab-menu-item.selected{
+    border-bottom: 2px solid #2860e1;
+}
+
+.tab-menu-item.selected a{
+    color: #2860e1;
+    font-weight: 500;
+}
