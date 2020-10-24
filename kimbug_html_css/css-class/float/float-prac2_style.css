@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #1f2d3d;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    background-color: #eff2f7;
+    margin: 0 auto;
+}
+
+body::after{
+    content: "@kkojae_";
+    display: block;
+    margin-top: 50px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+h1{
+    color: #1f2d3d;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+strong{
+    font-size: 14px;
+    font-weight: 400;
+    color: #afb3b9;
+    line-height: 1.4285;
+}
+
+p{
+    font-size: 16px;
+    color: #80868e;
+    line-height: 1.5;
+}
+
+/* where your code begins */
+
+/* 자주 사용하는 요소들은 이렇게 클래스를 따로 작성해두고 재활용 해주는 방법이 있습니당! */
+/* pseudo를 통해! 무너진 display를 잡아줄 수 있습니다. */
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.card{
+    padding: 20px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 540px;
+    border-radius: 4px;
+}
+
+.card-user{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.card-content h1{
+    margin-bottom: 4px;
+}
+
+/* margin-bottom 이라던지 어떠한 property의 value가 먹지 않을땐 항상 display를 확인해봐야한다. */
+.card-content strong{
+    display: block;
+    margin-bottom: 12px;
+}
+
+.card-user,
+.card-content{
+    float: left;
+}
