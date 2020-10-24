@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    color: #212529;
+}
+
+/* 
+자식에 float를 먹이고, 부모는 갈곳을 잃어버리고 쭈그러 들지만, 부모요소에 overflow: hidden을 하게 되면 자신의 원래 공간을 찾게 됩니다.
+자식들을 다시 되 찾아온다라고 생각하면 될거 같아요!
+망가진 layout을 되돌릴 수 있습니다!
+
+*/
+
+.parent{
+    /* overflow: hidden; */
+    width: 400px;
+    margin: 0 auto;
+    background-color: #eff2f7;
+}
+
+
+/* pseudo를 활용한 clear 사용법
+clear요소를 사용하기 위해선 요소가 block 요소일때만 사용이 가능합니다.
+display: block을 항상 해주어야 합니다.
+content: "" 역시 pseudo를 쓰기위해선 필요합니다.
+*/
+
+.parent::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+
+.child{
+    /* float: left; */
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* float 붕 뜨다 떠다니다,
+
+집나간 자식,, 부모도 자식을 잃어버리고 남은 자식들만 챙기게 된다.
+float: left를 하게 되면 그 자리에서 붕 뜨게 됩니다.
+parent의 height 값을 따로 설정하지 않았다면, 자식 한명이 집을 나갔으니 그 자식의 높이는 무시하고 남은 두 자식의 높이의 값을 parent의 height로 설정하게 됩니다.
+
+float 먹은 요소는 inline, inlineblock, block 모두 -->> block 으로 바뀌게 됩니다.
+
+자식요소에 float: left를 각 각 먹이게 되면 좌우 정렬이 됩니다. 단, 부모의 넓이가 허락한다면!!
+부모의 넓이가 모자라면 뒤에 숨지 않고 당당하게 먼저 선언된 float뒤에 자리를 차지하게 된다!
+
+block 요소들은 float된 요소들을 밑으로 깔리지만, inline 요소들을 float된 요소의 옆으로 흐르듯이 나열하게 됩니다.
+
+*/
+
+.red{
+    float: left;
+    background-color: #ff4949;
+    opacity: .5;
+}
+
+.yellow{
+    float: left;
+    background-color: #ffc828;
+}
+
+/* 
+claer property를 사용하게 되면 집나간 자식들이 어디있는지 알수 있다. 그래서 그 공간을 제외하고, 남은 공간을 차지 하게 됩니다!
+clear: left를 하게 되면 float: left 만을 인식하게 되고, clear: right는 float:right
+clear: both 라는 값을 주게 되면 left right 둘다 모두 인식하게 됩니다!
+*/
+.blue{
+    /* clear: both; */
+    float: left;
+    background-color: #0066ff;
+}
+
+/* 가상요소 pseudo
+반드시 content: ""; 을 작성해주어야 합니다!
+의미없는 문구나, 디자인을 할 때 사용하면 html markup을 망가뜨리지 않고 디자인 할 수 있다!
+::before{}
+::after{} 두가지를 사용할 수 있다.
+before는 요소가 나오기 전에 after는 요소가 나온 다음에 작성됩니다.
+*/
+.pseudo::before{
+    content: "✨";
+    margin-right: 20px;
+    font-size: 40px;
+}
+
+/* 
+가상요소는 default로 inline 요소입니다.
+width와 height값을 조정하고 싶다면, display: inline-block 혹은 block을 설정 해주셔야 합니다!
+*/
+.pseudo::after{
+    content: "!";
+    display: inline-block;
+    width: 20px;
+    height: 30px;
+    background-color: pink;
+    font-style: italic;
+}
+
+.other{
+    color: #fff;
+    background-color: #000;
+    font-size: 30px;
+}
