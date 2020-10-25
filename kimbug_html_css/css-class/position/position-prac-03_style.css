@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    font-family: "Nunito Sans", sans-serif;;
+    font-size: 16px;
+    color: #1f2d3d;
+    line-height: 1.5;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    background-color: #eff2f7;
+    letter-spacing: -0.02em;
+    margin: 0 auto;
+}
+
+body::after{
+    content: "@kkojae_";
+    display: block;
+    margin-top: 50px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active{
+    box-shadow: none;
+    outline: none;
+}
+
+.modal{
+    background-color: #fff;
+}
+
+.modal-title{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.input-group input,
+.input-group button{
+    font-size: 14px;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.close-button{
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    background-image: url(./assets/icon-close.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* where your code begins */
+
+.modal{
+    position: relative;
+    padding: 32px 40px;
+    border-radius: 4px;
+}
+
+.modal-title,
+.modal-desc{
+    text-align: center;
+}
+
+.modal-title{
+    margin-bottom: 4px;
+}
+
+.modal-desc{
+    max-width: 590px;
+    margin: 0 auto 24px;
+}
+
+.input-group{
+    text-align: center;
+}
+
+.input-group input{
+    width: 200px;
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f8fa;
+    margin-right: 8px;
+}
+
+/* 
+button의 width 값을 만지기 보다는 padding값을 사용하게 되면 글씨 길이가 길어졌을때도 다시 손볼 필요없이 사용할 수 있다. 
+재사용성!
+*/
+.input-group button{
+    height: 36px;
+    padding: 0 14px;
+    color: #fff;
+    background-color: #2860e1;
+    border: none;
+    border-radius: 4px;
+}
+
+.close-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 8px;
+}
