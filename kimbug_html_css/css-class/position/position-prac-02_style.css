@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    font-family: "Noto sans KR", sans-serif;
+    font-size: 16px;
+    color: #1f2d3d;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    background-color: #eff2f7;
+    margin: 0 auto;
+}
+
+body::after{
+    content: "@kkojae_";
+    display: block;
+    margin-top: 50px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+h1{
+    font-size: 22px;
+    font-weight: 500;
+    color: #1f2d3d;
+    line-height: 1.454545;
+}
+
+span{
+    font-size: 14px;
+    font-weight: 400;
+    color: #7d858f;
+    line-height: 1.090909;
+}
+
+strong span{
+    font-size: 16px;
+    font-weight: 400;
+    color: #525d69;
+    line-height: 1.5;
+}
+
+button{
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+}
+
+#prev{
+    background-image: url(./assets/icon-backward.svg);
+}
+
+#next{
+    background-image: url(./assets/icon-forward.svg);
+}
+
+/* where your code begins */
+
+.card{
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+/* img size 조정 할때 자주 사용하는 조합 width: 100% height: auto */
+.card-carousel img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.card-carousel{
+    position: relative;
+}
+
+#prev,
+#next{
+    /* absolute를 활용해 가운데 배치를 할때는, top 50% transform: translateY(-50%) 를 짝궁처럼 사용합니다. 
+    transform의 translate() 는 대상을 이동시키기 위함.. x,y,z 축으로 이동 시킬 수 있고,
+     -50% 자기 자신의 절반! 만큼 위로 올라가자!
+     50% 자기 자신의 절반! 만큼 아래로 내려가자! 라는 의미를 가지고 있습니다.
+     absolute top 50%은 자기 자신의 시작점을 50%에 맞추기때문에 살짝 아래로 처져있는것을 확인 할 수 있고, transform의 translate()를 통해 이를 보완 할 수 있다.
+    */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prev{
+    left: 0;
+}
+
+#next{
+    right: 0;
+}
+
+.card-content{
+    padding: 12px 16px;
+}
+
+.card-content h1{
+    margin-bottom: 2px;
+}
+
+.card-content strong{
+    display: block;
+    margin-top: 8px;
+    /* text-align inline 속성의 친구들의 글씨 정렬을 해주는 아이! right은 오른쪽 정렬! */
+    text-align: right;
+}
