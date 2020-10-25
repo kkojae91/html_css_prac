@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1f2d3d;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    height: 100vh;
+    background-color: #eff2f7;    
+    margin: 0 auto;
+}
+
+body::after{
+    content: "@kkojae_";
+    display: block;
+    margin-top: 50px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+h1{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #273444;
+}
+
+/* where your code begins */
+/* 
+img tag는 inline 요소이지만, file 자체가 가지고 있는 사이즈가 있어서 width height가 먹는다. 
+그래서 그냥 명시적으로 display: block 을 선언 해주는게 좋다. 그래야 css의 사소한 오차를 줄일 수 있고, 조그마한 버그를 잡아줄 수 있습니다.
+*/
+
+.user-card{
+    width: 100%;
+    max-width: 240px;
+    padding: 8px 12px;
+    border: 1px solid #e5eaef;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.user-card::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.user-photo,
+.user-name{
+    float: left;
+}
+
+.user-photo{
+    position: relative;
+    margin-right: 12px;
+}
+
+.user-photo img{
+    display: block;  
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user-status{
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: #21d891;
+}
+
+
+/* flex를 사용하게 되면 아래와 같은 원시적인 방법은 필요가 없습니다. 수업을 아직 다 배우지 않아서,,, 이런식으로 가운데 정렬을 해보았다. */
+.user-name{
+    padding: 8px 0;
+}
