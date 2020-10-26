@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #1f2d3d;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    background-color: #eff2f7;
+    margin: 0 auto;
+}
+
+body::after{
+    content: "@kkojae_";
+    display: block;
+    margin-top: 50px;
+    font-size: 12px;
+    font-weight: 600;
+}   
+
+a{
+    font-size: 16px;
+    line-height: 20px;
+    color: #8492a6;
+    text-decoration: none;
+}
+
+.tab-menu{
+    display: flex;
+    /* flex-direction: row; default 값이 row */
+    /* flex-wrap: nowrap; default 값이 nowrap */
+    /* justify-content: flex-start; default 값이 flex-start */
+    align-items: center; /* default 갑이 flex-start */
+    padding-left: 0;
+    background-color: #fff;
+    list-style-type: none;
+    border-bottom: 1px solid #e5eaef;
+    border-radius: 4px;
+}
+
+.tab-menu-item{
+    margin-right: 16px;
+}
+
+.tab-menu-item:last-child{
+    margin-right: 0;
+}
+
+.tab-menu-item.active{
+    border-bottom: 2px solid #2860e1;
+}
+
+.tab-menu-item.active a{
+    font-weight: 800;
+    color: #2860e1;
+}
+
+.tab-menu-item a{
+    display: block;
+    padding: 16px 20px;
+}
