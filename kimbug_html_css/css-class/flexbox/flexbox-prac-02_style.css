@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #1f2d3d;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    background-color: #eff2f7;
+    margin: 0 auto;
+}
+
+body::after{
+    content: "@kkojae_";
+    display: block;
+    margin-top: 50px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+h1{
+    font-size: 16px;
+    font-weight: 400;
+    color: #1f2d3d;
+    line-height: 1.25;
+}
+
+strong{
+    font-size: 14px;
+    font-weight: 400;
+    color: #afb3b9;
+    line-height: 1.4285;
+}
+
+p{
+    font-size: 16px;
+    color: #79818b;
+    line-height: 1.5;
+}
+
+.card{
+    display: flex;
+    /* flex-direction, flex-wrap, justify-content, align-items 모두 default 값을 설정함으로 밑의 설정은 필요 없다. */
+    /* flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start; */
+
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.card-user{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.card-content h1{
+    margin-bottom: 4px;
+}
+
+.card-content strong{
+    display: block;
+    margin-bottom: 12px;
+}
