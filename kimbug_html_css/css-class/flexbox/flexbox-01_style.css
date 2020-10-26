@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    color: #212592;
+}
+
+.parent{
+    /* display flex를 해주면 order를 자식 요소에 사용할 수 있습니다.
+    자식 요소의 순서를 뒤 바꿀 수 있다. 1 2 3 ...*/
+    display: flex;
+    /* row, column row-reverse column-reverse  */
+    flex-direction: row;
+    /*
+    flex-wrap nowrap 한줄에 무조건 정렬 (자식의 width값이 줄어들면서 핝줄에 정렬된다.)
+    flex-wrap wrap을 하면 자식의 사이즈가 부모의 사이즈보다 크게 되면 자연스럽게 다음 줄에 정렬된다.
+    default 값은 nowrap
+    */
+    flex-wrap: wrap;
+
+    /* justify-content
+    main axis의 자식요소들을 정렬하려면, justify-content를 사용한다.
+    flex-start: flex라인의 시작점부터 정렬(row-reverse의 경우는 반대편에서 정렬된다.), 
+    flex-end: flex라인의 끝점부터 정렬, 
+    center: (main-axis)가운데 정렬, 
+    space-around: 요소하나 하나 왼쪽과 오른쪽 (column일 경우는 위와 아래) 를 동일한 간격을 갖게 해준다., 
+    space-between: 요소들 사이의 간격들을 같게 해주는 것, 
+    등의 속성값이 있습니다.
+    */
+
+    /* justify-content: center; */
+ 
+    /* align-items
+    cross axis의 자식요소들을 정렬 할때는, align-items, align-content가 있습니다.
+    flex-start
+    flex-end
+    center
+    << space-between, space-around 는 지원하지 않는다. >>
+     */
+
+    /* align-items: center; */
+
+    /* align-content 를 사용하기 위해선 flex-wrap이 wrap이 되어야 합니다. */
+    /* flex-wrap을 wrap으로 설정하게되고 아이템이 넘쳐서 다음 줄에 생기게 되면, cross axis가 추가적으로 생기게 됩니다. */
+    /* flex-wrap을 wrap으로 설정 했을때, 하나의 cross axis가 아이템 전체의 정렬을 하고 싶을때 */
+    /* 
+    align-items에서는 사용하지 못했던, sapce-around, space-between 를 사용할 수 있다.
+    flex-start, flex-end, center 역시 사용할 수 있다.
+    */
+    align-content: flex-start;
+
+    width: 600px;
+    height: 1000px;
+    margin: 0 auto;
+    background-color: #eff2f7;
+}
+
+.child{
+    width: 300px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+}
+
+.red{
+    background-color: #ff4949;
+}
+
+.yellow{
+    background-color: #ffc82c;
+}
+
+.blue{
+    background-color: #0066ff;
+}
