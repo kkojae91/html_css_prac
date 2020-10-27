@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: "Noto Sans KR", sans-serif;
+    letter-spacing: -0.01em;
+}
+
+/* a tag가 가지고 있는 decoration 기능을 지운다. 밑줄,,, 없애기 */
+a{
+    text-decoration: none;
+}
+
+.landing{
+    background-image: url("./assets/img-cafe.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.landing-title{
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+    color: #fff;
+}
+
+.landing-title strong{
+    display: block;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: -0.01em;
+}
+
+.landing-link{
+    line-height: 1;
+    color: #fff;
+}
+
+.banner-title a{
+    color: #1f2d3d;
+}
+
+/* where your code begins */
+/* 반응형 웹은 무조건 모바일에서 시작하고 큰화면으로 넘어가면 된다. 아이폰 5 320px 에서 시작! */
+.banner{
+    /* position fixed 는 viewport기준으로 위치를 고정 시킬 수 있는 친구! 스크롤을 내려도 항상 viewport 기준으로 고정 되어있습니다. */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* height: 64px; */
+    background-color: #ffc82c;
+}
+.banner-title a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    width: 100%;
+    height: 64px;
+    /* background-color: hotpink; */
+}
+
+.landing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+.landing-title{
+    margin-bottom: 24px;
+    text-align: right;
+}
+
+/* a tag 이기 때문에 display가 inline요소이기때문에 속성값들이 안먹는다. display block 을 해줘야하는데,
+   우리는 가운데 정렬을 해줘야하기 때문에 display flex 를 해서 block 요소를 만들어 주고, flex 속성들을 사용해서 가운데 정렬을 만들어 주면됩니다. */
+.landing-link{
+    /* display: block; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 52px;
+    font-size: 15px;
+    /* rgba( 0,0,0,0.5) 마지막 값이 투명도 입니다. 0.5의 투명도를 같는 검정색 background-color를 입힐 수 있다. */
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #fff;
+    border-radius: 16px;
+}
+
+/* mediaquery는 바뀌는 부분만 다시 설정 해주면 된다. 다른것들은 그대로 유지! */
+@media screen and (min-width: 768px){
+    .banner {
+        /* position 의 경우는 top bottom 중 하나만 선택하고 left right중 하나만 선택해서 사용한다.
+        mediaquery를 쓰다 position의 값을 변경하게 된다면, bottom 에 auto값을 할당하고, top 0 을 주면 기존의 bottom에 있는 값들은 무시가 됩니다. */
+        top: 0;
+        bottom: auto;
+    }
+
+    .banner-title a{
+        height: 80px;
+    }
+
+    .landing-title{
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .landing-link{
+        font-size: 18px;
+        width: 180px;
+        height: 56px;
+    }
+
+    .landing{
+        align-items: center;
+    }
+}
