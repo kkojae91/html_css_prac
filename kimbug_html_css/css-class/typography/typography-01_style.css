@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    font-size: 15px;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    color: #212529;
+}
+
+
+/* font-size
+px 절대단위 Absoulte unit
+em, rem 상대단위 Relative unit
+em = equal to capital M (대문자 M사이즈를 기준으로 한다?) 
+부모에서 먹은 font-size의 적용되는 사이즈.. 실제로 적용된 폰트 사이즈를 1em으로 한다. --> 사람들이 잘 사용하지 않습니다.
+rem = root em
+root 라는 의미는 html tag를 의미한다. root font-size를 1rem으로 본다.
+*/
+
+/* line-height 줄 간격!
+- 특징 line-height가 아무리 넓게 설정하더라도 줄간격의 한 가운데에 위치 한다.
+em = em을 자주 사용한다. 적용된 폰트 사이즈에서 몇배 정도 띄워 줄것인가 하기 위함!
+font-size: 16px;
+line-height: 1.5;  폰트 사이즈에 비례해서 1.5배 줄간격을 줄 경우 em은 생략하는게 관례..
+px, rem 은 잘 사용하지 않는다...
+*/
+
+/* letter-spacing 글자와 글자 사이의 간격
+
+em 현재 적용된 font-size의 비례해서... 를 많이 사용한다.
+letter-spacing에서는 em을 생략해서는 안됩니다.
+px,rem은 잘 사용하지 않는다.
+*/
+
+/* font-family 폰트의 서체를 사용할 때 사용.
+우선 순위 혹시 폰트가 없을때를 대비해서 3개 정도 주루룩 나열 한다.
+맨 앞에 있는 서체를 사용..
+sans-serif 글씨에서 삐쭉삐쭉 튀어 나오거나 글씨 두께가 일정한 친구들. <--> serif
+font-family: "Poppins", "Roboto", sans-serif;
+*/
+
+/* font-weight 폰트의 굵기를 바꾸고 싶을때 사용.
+
+100 200 300 400 500 600 700 800 900
+100 thin / thin italic
+300 light / light italic
+400 regular / regular italic
+500 medium / medium italic
+700 bold / bold italic
+900 black / black italic
+*/
+
+/* color 글씨 색
+# 0066ff
+rgb (0,102,255)
+rgba (0,102,255, 1) alpha 투명도 1(완전히 불투명) 0(완전히 투명) 0.5 (50%로 불투명)
+*/
+
+/* text-align 글씨 정렬
+left, right, center default: left;
+*/
+
+/* text-indent 글씨 들여쓰기.
+px
+*/
+
+/* text-transform  영어에만 적용된다.
+noen, capitalize, uppercase, lowercase
+capitalize 첫 문자는 무조건 대문자로 변경,
+uppercase 모든 문자 대문자.
+lowercase 모든 문자 소문자.
+*/
+
+/* text-decoration 택스트 꾸미기. 줄에 관련된.
+none 
+underline 밑줄생성
+line-through 글씨 가운데에 줄 긋기.
+overline 글씨 위에 줄 생성
+
+보통 아래와 같을 때 사용을 많이 한다.
+a tag -->> text-decoration: none; 해주면 a tag 가 가지고 있는 밑줄을 삭제한다.
+*/
+
+/* font-style 폰트의 스타일을 바꿔주는 녀석,
+normal/ italic(문자를 기울리는 것) / oblique(문자를 기울리는 것) 보통 italic을 사용.
+<em> tag 를 사용하면 기본값이 italic인데 이것을 해제 해줄 때 많이 사용.
+font-style: normal; 
+*/
+p{
+    font-size: 24px;
+}
