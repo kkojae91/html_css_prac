@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #1f2d3d;
+    line-height: 1.5;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    background-color: #eff2f7;
+    margin: 0 auto;
+    letter-spacing: -0.02em;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #0066ff;
+    transition: font-size 2500ms ease-out, background-color 2000ms ease-in 1000ms;
+}
+/* transition의 각각의 property를 적용하고 싶으면, ","를 활용하면 됩니다. */
+
+/* timing-function transition의 3번째 인자 값 생략가능!
+ease-in: 처음에는 천천히 바뀌다 나중에 휙~ 바뀌는 친구
+ease-out: 처음에는 휙 바뀌다 나중에 천천히 바뀌는 친구
+ease-in-out: 처음이랑 나중 둘다 천천히 바뀌는 친구
+cubic-bezier(): 변화의 속도를 내가 만들고 싶을때 사용하는 것.
+ */
+ /* delay transition이 몇초 후에 일어났으면 했을때!! 4번째 인자
+ ms, s 
+ */
+
+.box.active{
+    font-size: 30px;
+    background-color: #ff4949;
+}
