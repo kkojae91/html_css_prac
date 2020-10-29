@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    line-height: 1.5;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    color: #1f2d3d;
+    background-color: #eff2f7;
+}
+
+body::after{
+    content: "@kkojae_";
+    display: block;
+    margin-top: 50px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px 0;
+    border-radius: 4px;
+}
+
+.card-main-photo{
+    position: relative;
+}
+
+.card-main-photo-heart{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #fff;
+    background-image: url("./assets/icon-favorite.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+    padding: 15px;
+    width: 25px;
+    height: 25px;
+}
+
+.card-main-photo-room{
+    /* width: 100%; */
+    width: 300px;
+    height: 200px;
+    background-image: url("./assets/img-house.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 4px;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* width: 100%; */
+    /* border: 1px solid gray; */
+    height: 100%;
+}
+
+.card-content-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-content-score{
+    display: flex;
+    align-items: center;
+}
+
+.card-content-score img{
+    position: relative;
+    bottom: 1.4px;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+h1{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.card-content-button button{
+    background-color: hotpink;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    padding: 3px 8px;
+    margin-right: 4px;
+}
+
+.card-content-button strong{
+    font-weight: 300;
+    color: #80868e;
+}
+
+p{
+  font-size: 14px;  
+  color: #80868e;
+}
+p strong{
+    font-weight: 400;
+    color: #1f2d3d;
+
+}
+.card-content-detail{
+    font-size: 14px;
+    color: #80868e;
+}
