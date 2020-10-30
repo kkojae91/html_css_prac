@@ -1,0 +1,38 @@
+*{
+     box-sizing: border-box;
+     margin: 0;
+}
+
+body{
+     font-family: "Poppins", sans-serif;
+}
+
+/* overflow
+visible: 그냥 보여줘라 content가 넘치더라도,
+auto: content가 넘치면 자동으로 scroll을 생성시켜주세요. 아니라면 스크롤 바는 가려주세요
+hidden: content가 넘치면 숨겨주세요
+scroll: 기본적으로 scroll-bar를 생성해주세요
+*/
+
+
+/* 자식요소보다 부모요소의 사이즈가 작을때... 그냥 넘쳐 흐르기때문에 overflow설정을 해줘야한다. */
+.box{
+    width: 200px;
+    height: 300px;
+    background-color: #ff4949;
+    overflow-x: scroll;
+}
+
+p{
+     width: 500px;
+     height: 400px;
+     background-color: #0066ff;
+     overflow: auto;
+}
+
+blockquote{
+     width: 700px;
+     height: 400px;
+     background-color: #ffc82c;
+     overflow: hidden;
+}
