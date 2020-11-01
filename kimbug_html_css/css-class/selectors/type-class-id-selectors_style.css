@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #eff2f7;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 400px;
+    background-color: #fff;
+    padding: 30px;
+}
+
+.card h1{
+    align-self: flex-start;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card p{
+    color: #80868e;
+    font-weight: 300;
+}
+
+#kkojae{
+    font-style: italic;
+}
+
