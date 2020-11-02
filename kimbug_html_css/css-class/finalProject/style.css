@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: "Dm Sans", sans-serif;
+}
+
+/* Reset CSS */
+a{
+    /* inherit 상속 부모 색상을 상송 받아라. */
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea{
+    font-family: "Dm Sans", sans-serif;
+    font-size: 16px;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+textarea:focus,
+textarea:active{
+    outline: none;
+    box-shadow: none;
+}
+
+ul,
+ol,
+li{
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+p{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2b292d;
+    letter-spacing: -0.01em;
+}
+
+.fill-button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 140px;
+    height: 40px;
+    border-radius: 2px;
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: -0.05em;
+    font-weight: 600;
+    color: #fff;
+    background-color: #3040c4;    
+    transition: opacity 300ms ease-in-out;
+}
+
+.fill-button.inverted{
+    background-color: #fff;
+    color: #3040c4;
+}
+
+.fill-button:hover{
+    opacity: 0.5;
+}
+
+
+/* landing */
+.landing{
+    background-color: #fdded8;
+    text-align: center;
+}
+
+.landing-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.landing-title{
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #2b292d;
+    margin-bottom: 24px;
+}
+
+.landing-desc{
+    margin-bottom: 20px;
+}
+
+.landing .button-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing .button-group .fill-button:first-child{
+    margin-right: 8px;
+}
+
+
+/* >= 768px (Desktop) */
+@media screen and (min-width: 768px){
+    /* Reset CSS */
+    p{
+        font-size: 22px;  
+        line-height: 1.3636363636;
+    }
+
+    .fill-button{
+        width: 160px;
+        height: 56px;
+        font-size: 18px;
+        line-height: 1.5555555556;
+    }
+
+    
+    /* landing */
+    .landing-content{
+        /* 자식들의 합으로 높이설정 */
+        height: auto;
+        padding: 120px 0;
+    }
+
+    .landing-title{
+        font-size: 70px;
+        line-height: 1.0285714286;
+        margin-bottom: 32px;
+    }
+
+    .landing-desc{
+        margin-bottom: 32px;
+    }
+
+    .landing .button-group .fill-button:first-child{
+        margin-right: 16px;
+    }
+        
+}
+
+/* Custom Grid System - Fix container width */
+@media screen and (min-width: 1200px){
+    .container{
+        max-width: 960px !important; /* !important 이런 경우에는 사용해도 좋다. bootstrap grid위에 덮어 씌우는 것 이기 때문.*/
+    }
+}
